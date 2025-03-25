@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['Damaged', 'Empty', 'Overripe', 'Ripe', 'Unripe']
+
+roboflow:
+  workspace: dnjisme-zxct1
+  project: my-first-project-rapuz
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/dnjisme-zxct1/my-first-project-rapuz/dataset/3
