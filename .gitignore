@@ -9,3 +9,6 @@ runs/
 
 # logs
 *.log
+
+# Custom training (from error)
+/custom.py
