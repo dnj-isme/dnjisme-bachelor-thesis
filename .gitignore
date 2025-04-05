@@ -3,3 +3,9 @@
 # dependencies install
 yolov12/
 runs/
+
+# AMP Check
+/yolo11n.pt
+
+# logs
+*.log

@@ -8,6 +8,6 @@ names: ['Damaged', 'Empty', 'Overripe', 'Ripe', 'Unripe']
 roboflow:
   workspace: dnjisme-zxct1
   project: my-first-project-rapuz
-  version: 4
+  version: 7
   license: CC BY 4.0
-  url: https://universe.roboflow.com/dnjisme-zxct1/my-first-project-rapuz/dataset/4
+  url: https://universe.roboflow.com/dnjisme-zxct1/my-first-project-rapuz/dataset/7
