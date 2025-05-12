@@ -7,7 +7,7 @@ import datetime
 
 ERROR_LOG = "error.log"
 STATUS_LOG = "status.log"
-ITER = 1
+ITER = 2
 
 def log_message(message_type, description):
   timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")

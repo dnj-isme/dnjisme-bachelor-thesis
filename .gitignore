@@ -10,5 +10,5 @@ runs/
 # logs
 *.log
 
-# Custom training (from error)
-/custom.py
+# Custom gitignore
+custom.py
