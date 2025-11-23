@@ -5,9 +5,9 @@ import psutil
 import threading
 import datetime
 
-ERROR_LOG = "error.log"
-STATUS_LOG = "status.log"
-ITER = 2
+ERROR_LOG = "./logs/error.log"
+STATUS_LOG = "./logs/status.log"
+ITER = 3
 
 def log_message(message_type, description):
   timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -44,6 +44,9 @@ if __name__ == "__main__":
       print(f"⚠️ Model file {model_files[i]} does NOT exist! Skipping...")
       continue
     
+    if(not model_path.__contains__("10")):
+      continue
+    
     print(model_path)
     model = YOLO(model_path)
     name = f"Run#{ITER:03d}_vanilla_{model_names[i]}"
@@ -52,10 +55,8 @@ if __name__ == "__main__":
     batch_size = 4
     if model_type in ['n', 't']:
       batch_size = 32
-    elif model_type == 's':
+    elif model_type in ['s', 'm']:
       batch_size = 16
-    elif model_type == 'm':
-      batch_size = 8
     
     log_message("Training", f"Starting the training data in model {model_names[i]}")
     
@@ -74,7 +75,7 @@ if __name__ == "__main__":
         warmup_bias_lr=0.01,
         cos_lr=True,
         optimizer="AdamW",
-        patience=20
+        patience=40
       )
       log_message("Training", f"Finishing the training data in model {model_type}")
     except Exception as e:

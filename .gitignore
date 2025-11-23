@@ -8,7 +8,14 @@ runs/
 /yolo11n.pt
 
 # logs
+logs/
 *.log
+
+# Results
+*.csv
+*.xlsx
 
 # Custom gitignore
 custom.py
+custom.ipynb
+temp/
